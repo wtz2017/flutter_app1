@@ -6,6 +6,7 @@ import 'lifecycle_watcher.dart';
 import 'route_args.dart';
 import 'anim.dart';
 import 'signature.dart';
+import 'method_channel_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         RoutePages.LIFECYCLE_WATCHER: (context) => LifecycleWatcher(),
         RoutePages.ANIM: (context) => Anim(title: "Anim"),
         RoutePages.SIGNATURE: (context) => Signature(),
+        RoutePages.METHOD_CHANNEL_TEST: (context) => MethodChannelTest(),
       },
     );
   }
@@ -36,6 +38,7 @@ class RoutePages {
   static const String LIFECYCLE_WATCHER = '/lifecycle_watcher_page';
   static const String ANIM = '/anim_page';
   static const String SIGNATURE = '/signature_page';
+  static const String METHOD_CHANNEL_TEST = '/method_channel_page';
 }
 
 class HomePage extends StatelessWidget {
@@ -59,6 +62,7 @@ class HomePage extends StatelessWidget {
               RoutePages.LIFECYCLE_WATCHER, RoutePages.LIFECYCLE_WATCHER, null),
           RouteButton(RoutePages.ANIM, RoutePages.ANIM, null),
           RouteButton(RoutePages.SIGNATURE, RoutePages.SIGNATURE, null),
+          RouteButton(RoutePages.METHOD_CHANNEL_TEST, RoutePages.METHOD_CHANNEL_TEST, null),
         ],
       )),
     );
